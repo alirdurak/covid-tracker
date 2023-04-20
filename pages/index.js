@@ -1,4 +1,6 @@
 import Head from "next/head";
+import HomePageContainer from "@/containers/home-page-container";
+import styles from "@/styles/main.module.scss";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>Home Page</main>
+      <main className={styles.main}>
+        <HomePageContainer />
+      </main>
     </>
   );
 }
