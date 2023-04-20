@@ -1,0 +1,14 @@
+.worldContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.cardContainer {
+  display: flex;
+  gap: 4rem;
+  margin: 2rem;
+}
