@@ -1,0 +1,30 @@
+.selectors {
+  display: flex;
+  justify-content: flex-start;
+  align-self: self-start;
+  gap: 0.2rem;
+  margin-left: 1.5rem;
+}
+.button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all ease-out 0.2s;
+  &:hover {
+    background-color: rgb(216, 214, 214);
+  }
+}
+.activeButton {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 2px solid blueviolet;
+  border-radius: 2px;
+}
