@@ -8,11 +8,12 @@
 .button {
   outline: none;
   border: none;
+  border-bottom: 2px solid transparent;
   border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
   font-size: 1rem;
-  transition: all ease-out 0.2s;
+  transition: all ease-out 0.4s;
   &:hover {
     background-color: rgb(216, 214, 214);
   }
@@ -22,7 +23,7 @@
   border: none;
   border-radius: 5px;
   background-color: transparent;
-  transition: all ease-in 0.2s;
+  transition: all ease-in 0.4s;
   cursor: pointer;
   font-size: 1rem;
   border-bottom: 2px solid blueviolet;
