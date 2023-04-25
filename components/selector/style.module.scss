@@ -4,6 +4,7 @@
   align-self: self-start;
   gap: 0.2rem;
   margin-left: 1.5rem;
+  color: inherit;
 }
 .button {
   outline: none;
@@ -13,7 +14,8 @@
   background-color: transparent;
   cursor: pointer;
   font-size: 1rem;
-  transition: all ease-out 0.4s;
+  transition: border ease-out 0.4s;
+  color: inherit;
   &:hover {
     background-color: rgb(216, 214, 214);
   }
@@ -23,9 +25,10 @@
   border: none;
   border-radius: 5px;
   background-color: transparent;
-  transition: all ease-in 0.4s;
+  transition: border ease-in 0.4s;
   cursor: pointer;
   font-size: 1rem;
   border-bottom: 2px solid blueviolet;
   border-radius: 2px;
+  color: inherit;
 }

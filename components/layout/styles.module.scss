@@ -2,11 +2,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 0.3s;
+  background: rgb(199, 212, 231);
+  background: linear-gradient(
+    16deg,
+    rgba(199, 212, 231, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 .layoutDark {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #333;
+  transition: all 0.3s;
+  background: rgb(159, 5, 5);
+  background: linear-gradient(
+    16deg,
+    rgb(61, 2, 2) 0%,
+    rgba(13, 13, 13, 1) 100%
+  );
   color: whitesmoke;
 }

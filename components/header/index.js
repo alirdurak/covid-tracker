@@ -1,11 +1,10 @@
 "use client";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import { TbMoon } from "react-icons/tb";
+import { TbMoon, TbSun } from "react-icons/tb";
 import covidLogo from "@/public/covid-logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "@/pages/redux/covidSlice";
-import { useState } from "react";
 
 export default function Header() {
   const currenTheme = useSelector((state) => state.covidSlice.theme);
@@ -24,7 +23,11 @@ export default function Header() {
         height={75}
         alt="This is the last pandemic purpose!"
       />
-      <TbMoon onClick={handleTheme} className={styles.darkmode} />
+      {currenTheme == "light" ? (
+        <TbMoon onClick={handleTheme} className={styles.darkmode} />
+      ) : (
+        <TbSun onClick={handleTheme} className={styles.darkmode} />
+      )}
     </header>
   );
 }

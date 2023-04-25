@@ -1,1 +1,4 @@
-
+* {
+  transition: all 0.1s;
+  font-family: "Oswald", sans-serif;
+}
