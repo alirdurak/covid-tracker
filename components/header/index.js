@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TbMoon, TbSun } from "react-icons/tb";
 import covidLogo from "@/public/covid-logo.png";
 import { useDispatch, useSelector } from "react-redux";
-import { changeTheme } from "@/pages/redux/covidSlice";
+import { changeTheme } from "@/redux/covidSlice";
 
 export default function Header() {
   const currenTheme = useSelector((state) => state.covidSlice.theme);
