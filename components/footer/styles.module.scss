@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+  div {
+    display: flex;
+    gap: 2rem;
+  }
+}
+.icon {
+  color: inherit;
+  width: 2rem;
+  cursor: pointer;
+  height: max-content;
+  transition: width 0.5s;
+  &:hover {
+    width: 2.5rem;
+    color: inherit;
+  }
+}
