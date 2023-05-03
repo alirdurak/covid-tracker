@@ -10,7 +10,7 @@ export default function Header() {
   const currenTheme = useSelector((state) => state.covidSlice.theme);
   const dispatch = useDispatch();
   const handleTheme = () => {
-    currenTheme == "light"
+    currenTheme === "light"
       ? dispatch(changeTheme("dark"))
       : dispatch(changeTheme("light"));
   };

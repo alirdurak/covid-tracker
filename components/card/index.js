@@ -1,7 +1,8 @@
 import styles from "./styles.module.scss";
-export default function Card({ status }) {
+import { TailSpin } from "react-loader-spinner";
+import { BsExclamationOctagon } from "react-icons/bs";
+export default function Card({ status, data, fetchStatus }) {
   let style;
-  const number = 200000000000;
 
   switch (status) {
     case "case":
@@ -16,8 +17,30 @@ export default function Card({ status }) {
   }
   return (
     <div className={style}>
-      <div>{number.toLocaleString()}</div>
-      <h3>{status.toString().toUpperCase()}</h3>
+      {fetchStatus === "success" && (
+        <>
+          <div>{data}</div>
+          <h3>{status.toString().toUpperCase()}</h3>
+        </>
+      )}
+      {fetchStatus === "loading" && (
+        <TailSpin
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      )}
+      {fetchStatus === "failed" && (
+        <>
+          <BsExclamationOctagon />
+          <h3>Not Loading</h3>
+        </>
+      )}
     </div>
   );
 }
