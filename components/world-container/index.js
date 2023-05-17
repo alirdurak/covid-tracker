@@ -20,7 +20,7 @@ export default function WorldContainer() {
       <div className={styles.cardContainer}>
         <Card
           fetchStatus={worldDataStatus}
-          data={worldData ? worldData.totalRecovered : NaN}
+          data={worldData ? worldData.totalCases : NaN}
           status="case"
         ></Card>
         <Card
