@@ -37,8 +37,14 @@ export default function NameDropdown() {
   useEffect(() => {
     if (dataType === "Countries") {
       setOptions(countryOptions);
-    } else {
+      setLocationValue(countryOptions.length > 1 && countryOptions[0].value);
+    } else if (dataType === "Continents") {
       setOptions(continentOptions);
+      setLocationValue(
+        continentOptions.length > 1 && continentOptions[0].value
+      );
+    } else {
+      setLocationValue("Please Wait...");
     }
   }, [data]);
   return (
