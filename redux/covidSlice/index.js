@@ -22,6 +22,7 @@ const covidSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      // World Data
       .addCase(fetchWorldData.fulfilled, (state, action) => {
         state.worldData = action.payload.result;
         state.worldDataStatus = "success";
@@ -31,6 +32,28 @@ const covidSlice = createSlice({
       })
       .addCase(fetchWorldData.rejected, (state) => {
         state.worldDataStatus = "failed";
+      })
+      // Continents Data
+      .addCase(fetchContinentsData.fulfilled, (state, action) => {
+        state.data = action.payload.result;
+        state.dataStatus = "success";
+      })
+      .addCase(fetchContinentsData.pending, (state) => {
+        state.dataStatus = "loading";
+      })
+      .addCase(fetchContinentsData.rejected, (state) => {
+        state.dataStatus = "failed";
+      })
+      // Countries Data
+      .addCase(fetchCountriesData.fulfilled, (state, action) => {
+        state.data = action.payload.result;
+        state.dataStatus = "success";
+      })
+      .addCase(fetchCountriesData.pending, (state) => {
+        state.dataStatus = "loading";
+      })
+      .addCase(fetchCountriesData.rejected, (state) => {
+        state.dataStatus = "failed";
       });
   },
 });
