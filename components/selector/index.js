@@ -1,11 +1,15 @@
 import styles from "./style.module.scss";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { changeDataType } from "@/redux/covidSlice";
 
 export default function Selector() {
   const [selected, setSelected] = useState("Continents");
+  const disptach = useDispatch();
 
   const handleSelect = (e) => {
     setSelected(e.target.value);
+    disptach(changeDataType(e.target.value));
   };
 
   return (
