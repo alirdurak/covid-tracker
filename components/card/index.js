@@ -3,7 +3,7 @@ import { TailSpin } from "react-loader-spinner";
 import { BsExclamationOctagon } from "react-icons/bs";
 export default function Card({ status, data, fetchStatus }) {
   let style;
-
+  // Style options
   switch (status) {
     case "case":
       style = styles.case;

@@ -10,7 +10,7 @@
   text-align: center;
   cursor: pointer;
   &:hover {
-    background-color: rgb(216, 214, 214);
+    background-color: rgba(187, 85, 85, 0.507);
   }
 }
 .menu {
@@ -19,11 +19,13 @@
   align-items: center;
   width: 20rem;
   max-height: 12rem;
-  background-color: rgb(216, 214, 214, 0);
+  background-color: rgba(187, 85, 85);
+  border-radius: 0px 0px 0px 10px;
   font-size: 1.5rem;
   position: absolute;
   transition: all 0.3s;
   overflow-y: auto;
+  scrollbar-arrow-color: red;
 }
 
 .item {
