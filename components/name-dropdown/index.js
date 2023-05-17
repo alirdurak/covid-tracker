@@ -1,12 +1,24 @@
 import styles from "./styles.module.scss";
 import Dropdown from "react-dropdown";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+import { changeLocationValue } from "@/redux/covidSlice";
 
 export default function NameDropdown() {
+  const dispatch = useDispatch();
   const data = useSelector((state) => state.covidSlice.data);
   const dataType = useSelector((state) => state.covidSlice.dataType);
   const [options, setOptions] = useState();
+  const [locationValue, setLocationValue] = useState();
+  // Value change handle
+  const handleChange = (e) => {
+    setLocationValue(e.value);
+  };
+  // Global locationValue Change
+  useEffect(() => {
+    dispatch(changeLocationValue(locationValue));
+  }, [locationValue]);
+  //  Dropdown options
   const continentOptions = data.map((item) => {
     return {
       value: item.continent,
@@ -25,10 +37,8 @@ export default function NameDropdown() {
   useEffect(() => {
     if (dataType === "Countries") {
       setOptions(countryOptions);
-      console.log(options);
     } else {
       setOptions(continentOptions);
-      console.log(options);
     }
   }, [data]);
   return (
@@ -37,6 +47,8 @@ export default function NameDropdown() {
         menuClassName={styles.menu}
         controlClassName={styles.select}
         options={options}
+        value={locationValue}
+        onChange={handleChange}
       />
     </div>
   );

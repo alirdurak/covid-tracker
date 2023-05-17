@@ -12,6 +12,7 @@ const initialState = {
   worldData: [],
   data: [],
   dataType: "Continents",
+  locationValue: "",
 };
 const covidSlice = createSlice({
   name: "covidSlice",
@@ -22,6 +23,9 @@ const covidSlice = createSlice({
     },
     changeDataType: (state, action) => {
       state.dataType = action.payload;
+    },
+    changeLocationValue: (state, action) => {
+      state.locationValue = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -61,5 +65,6 @@ const covidSlice = createSlice({
       });
   },
 });
-export const { changeTheme, changeDataType } = covidSlice.actions;
+export const { changeTheme, changeDataType, changeLocationValue } =
+  covidSlice.actions;
 export default covidSlice.reducer;
