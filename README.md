@@ -1,38 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Covid-19 App
 
-## Getting Started
+This project is a web application that displays Covid-19 statistics with a dark mode feature. It is built using Next.js, SCSS, and Redux Toolkit. The application allows users to filter Covid-19 data globally by continents or countries. Additionally, users can choose to view the interface in either dark or light mode based on their preference.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Retrieves live Covid-19 data from an API and presents up-to-date statistics.
+- Provides the ability to filter statistics by continents or countries.
+- User-friendly interface with easy-to-use functionalities.
+- Dark mode feature allows users to switch between dark and light mode.
+- Developed using Next.js for fast and efficient performance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Used Technologies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Next.js, React, Redux/toolkit, SCSS
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Demo
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://covid-app-alirdurak.netlify.app/
