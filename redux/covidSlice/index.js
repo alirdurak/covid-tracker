@@ -9,9 +9,9 @@ const initialState = {
   theme: "light",
   dataStatus: "",
   worldDataStatus: "failed",
-  worldData: {},
-  data: "",
-  dataType: "",
+  worldData: [],
+  data: [],
+  dataType: "Continents",
 };
 const covidSlice = createSlice({
   name: "covidSlice",
